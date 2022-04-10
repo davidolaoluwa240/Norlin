@@ -1,0 +1,188 @@
+/* Modals Section */
+.modal--overlay {
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: saturate(180%) blur(24px);
+  background-color: rgba(9, 8, 15, 0.9);
+
+  position: fixed;
+}
+
+.modal--overlay__alt {
+  background: linear-gradient(
+    315deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  backdrop-filter: saturate(100%) blur(2px);
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+/* Search Modal Section */
+.search--modal {
+  top: 20%;
+  width: 500px;
+  min-height: 50%;
+}
+
+.search--modal .form--group {
+  position: relative;
+}
+
+.search--modal .form--control {
+  width: 100%;
+  display: block;
+  height: 80px;
+  padding: 1.5rem;
+  border: 4px solid rgba(238, 238, 238, 0.1);
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--light-color);
+  background: transparent;
+}
+
+.search--modal .form--control::placeholder {
+  color: rgba(238, 238, 238, 0.5);
+}
+
+.search--modal .form--control:focus {
+  outline: none;
+}
+
+.search--modal .close--overlay {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 32px;
+  color: rgba(238, 238, 238, 0.5);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.search--modal .close--overlay:hover {
+  color: var(--light-color);
+}
+
+/* Authenticaton Modal Section */
+.auth--modal {
+  background: var(--light-color);
+  width: 500px;
+  height: 80vh;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 40px 32px;
+
+  overflow-y: auto;
+}
+
+.auth--modal > .close--overlay {
+  position: absolute;
+  font-size: 30px;
+  right: 25px;
+  top: 20px;
+  color: #1b1927;
+  cursor: pointer;
+}
+
+.auth--modal__head {
+  margin-bottom: 32px;
+}
+
+.auth--modal__head figure {
+  text-align: center;
+}
+
+.auth--modal__head figcaption {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1d1d1d;
+}
+
+.auth--modal__head img {
+  width: 60px;
+}
+
+.auth--modal .form--group {
+  color: #333;
+}
+
+.auth--modal .form--group:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.auth--modal .form--label {
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+  letter-spacing: 0px;
+  font-weight: 600;
+}
+.auth--modal .form--control {
+  display: block;
+  width: 100%;
+  height: 44px;
+  color: #3d3d3d;
+  font-size: 17px;
+  padding: 0 12px;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+}
+
+.auth--modal .form--control:focus {
+  outline: none;
+  border-color: #aeaeae;
+}
+
+.auth--modal__footer {
+  margin-top: 25px;
+}
+
+.auth--modal__footer p {
+  color: #515151;
+  font-size: 17px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.auth--modal__footer p > span {
+  color: rgb(11, 10, 14);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth--btn {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  color: var(--light-color);
+  background: rgb(11, 10, 14);
+  cursor: pointer;
+}
+
+.auth--btn:hover {
+  opacity: 0.92;
+}
+
+/* Media queries */
+@media screen and (max-width: 565px) {
+  .auth--modal {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .search--modal {
+    width: 90%;
+  }
+}

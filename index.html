@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Norlin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/shared.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/grid.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/navigation.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/modal.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" type="text/css" />
+  </head>
+  <body>
+    <!-- modal overlay -->
+    <section
+      class="modal--overlay modal--overlay__alt d--none"
+      data-modal-open="close"
+    ></section>
+
+    <!-- search modal -->
+    <section class="search--modal modal d--none" data-modal-name="search">
+      <form>
+        <div class="form--group">
+          <i
+            class="fa-solid fa-xmark close--overlay"
+            data-modal-open="close"
+          ></i>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            class="form--control"
+            placeholder="Type To Search..."
+            autocomplete="off"
+          />
+        </div>
+      </form>
+    </section>
+
+    <!-- login modal -->
+    <section class="auth--modal modal d--none" data-modal-name="login">
+      <i class="fa-solid fa-xmark close--overlay" data-modal-open="close"></i>
+      <div class="auth--modal__head">
+        <figure>
+          <img src="./assets/img/favicon.ico" alt="Norlin Logo" />
+          <figcaption>Sign In</figcaption>
+        </figure>
+      </div>
+
+      <form autocomplete="off">
+        <div class="form--group">
+          <label class="form--label" for="loginEmail">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="loginEmail"
+            class="form--control"
+            placeholder="Enter your email"
+            autofocus
+          />
+        </div>
+        <div class="form--group">
+          <label class="form--label" for="loginPassword">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="loginPassword"
+            class="form--control"
+            placeholder="Enter your password"
+          />
+        </div>
+      </form>
+
+      <footer class="auth--modal__footer">
+        <button type="submit" class="auth--btn">Login</button>
+        <p>
+          Don't have an account? <span data-modal-open="signup">Sign up</span>
+        </p>
+      </footer>
+    </section>
+
+    <!-- signup modal -->
+    <section class="auth--modal modal d--none" data-modal-name="signup">
+      <i class="fa-solid fa-xmark close--overlay" data-modal-open="close"></i>
+      <div class="auth--modal__head">
+        <figure>
+          <img src="./assets/img/favicon.ico" alt="Norlin Logo" />
+          <figcaption>Sign Up</figcaption>
+        </figure>
+      </div>
+
+      <form autocomplete="off">
+        <div class="form--group">
+          <label class="form--label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form--control"
+            placeholder="Enter your name"
+            autofocus
+          />
+        </div>
+        <div class="form--group">
+          <label class="form--label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form--control"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="form--group">
+          <label class="form--label" for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="form--control"
+            placeholder="Enter your password"
+          />
+        </div>
+        <div class="form--group">
+          <label class="form--label" for="confirmPassword"
+            >Confirm Password</label
+          >
+          <input
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+            class="form--control"
+            placeholder="Confirm your password"
+          />
+        </div>
+      </form>
+
+      <footer class="auth--modal__footer">
+        <button type="submit" class="auth--btn">Sign up</button>
+        <p>Already a member? <span data-modal-open="login">Sign in</span></p>
+      </footer>
+    </section>
+
+    <header id="main--header">
+      <nav class="navbar--nav">
+        <div class="navbar--brand">
+          <a href="./index.html">Norlin</a>
+        </div>
+        <ul class="navbar--list__group">
+          <li class="navbar--item">
+            <a href="./index.html" class="navbar--link">Home</a>
+          </li>
+          <li class="navbar--item">
+            <a href="" class="navbar--link">About</a>
+          </li>
+          <li class="navbar--item">
+            <a href="" class="navbar--link">Author</a>
+          </li>
+          <li class="navbar--item">
+            <a href="" class="navbar--link">Story</a>
+          </li>
+          <li class="navbar--item" data-modal-open="login">
+            <a href="" class="navbar--link">Log In</a>
+          </li>
+          <li
+            class="navbar--item navbar--item__signup"
+            data-modal-open="signup"
+          >
+            <a href="" class="navbar--link">Sign Up</a>
+          </li>
+          <li class="navbar--item navbar--item__menu" data-modal-open="menu">
+            <i class="fa-solid fa-bars"></i>
+          </li>
+          <li
+            class="navbar--item navbar--item__search"
+            data-modal-open="search"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="navbar--nav__mobile d--none" data-modal-name="menu">
+        <div class="navbar--nav__mobile--header">
+          <i
+            class="fa-solid fa-xmark close--overlay"
+            data-modal-open="close"
+          ></i>
+        </div>
+        <div class="navbar--nav__mobile--main">
+          <h2>Menu</h2>
+          <ul class="navbar__mobile--list">
+            <li class="navbar__mobile--item">
+              <a href="./index.html" class="navbar--link">Home</a>
+            </li>
+            <li class="navbar__mobile--item">
+              <a href="" class="navbar--link">About</a>
+            </li>
+            <li class="navbar__mobile--item">
+              <a href="" class="navbar--link">Author</a>
+            </li>
+            <li class="navbar__mobile--item">
+              <a href="" class="navbar--link">Story</a>
+            </li>
+            <li class="navbar__mobile--item" data-modal-open="login">
+              <a href="" class="navbar--link">Log In</a>
+            </li>
+            <li
+              class="navbar__mobile--item navbar__mobile--item__signup"
+              data-modal-open="signup"
+            >
+              <a href="" class="navbar--link">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <h1>Norlin</h1>
+        <p>Thoughts, Stories and ideas.</p>
+      </section>
+    </header>
+
+    <main id="main">
+      <section class="article--wrapper">
+        <div class="container article--container grid">
+          <article class="article grid--col-1">
+            <header class="article--header">
+              <p><i class="fa-regular fa-star"></i></p>
+            </header>
+            <div class="article--main">
+              <p class="article--timestamp">
+                <time datetime="PT2M">2 min read</time>
+                <time datetime="2020-10-12">Nov 12, 2020</time>
+              </p>
+              <h2 class="article--heading">
+                Believe and act as if it were impossible to fail
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat dolore repellendus recusandae nam libero blanditiis
+                repellat tempora ducimus laborum itaque.
+              </p>
+            </div>
+            <footer class="article--footer">
+              <p class="article--author__img">
+                <img src="./assets/img/article-author.jpg" />
+              </p>
+              <p class="article--author__name">Robert Willson in</p>
+              <div class="article--tags">
+                <p class="article--tag">Work</p>
+                <p class="article--tag">Notes</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="article">
+            <header class="article--header">
+              <p><i class="fa-regular fa-star"></i></p>
+            </header>
+            <div class="article--main">
+              <p class="article--timestamp">
+                <time datetime="PT2M">2 min read</time>
+                <time datetime="2020-10-12">Nov 12, 2020</time>
+              </p>
+              <h2 class="article--heading">
+                The way I see it, every life is a pile of good things
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat dolore repellendus recusandae nam libero blanditiis
+                repellat tempora ducimus laborum itaque.
+              </p>
+            </div>
+            <footer class="article--footer">
+              <p class="article--author__img">
+                <img src="./assets/img/article-author.jpg" />
+              </p>
+              <p class="article--author__name">Robert Willson in</p>
+              <div class="article--tags">
+                <p class="article--tag">Life</p>
+                <p class="article--tag">Rest</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="article">
+            <header class="article--header">
+              <p><i class="fa-regular fa-star"></i></p>
+            </header>
+            <div class="article--main">
+              <p class="article--timestamp">
+                <time datetime="PT2M">2 min read</time>
+                <time datetime="2020-10-12">Nov 12, 2020</time>
+              </p>
+              <h2 class="article--heading">
+                Everything has beauty, but not everyone can see
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat dolore repellendus recusandae nam libero blanditiis
+                repellat tempora ducimus laborum itaque.
+              </p>
+            </div>
+            <footer class="article--footer">
+              <p class="article--author__img">
+                <img src="./assets/img/article-author.jpg" />
+              </p>
+              <p class="article--author__name">Robert Willson in</p>
+              <div class="article--tags">
+                <p class="article--tag">Fashion</p>
+                <p class="article--tag">Story</p>
+              </div>
+            </footer>
+          </article>
+
+          <div class="article--group grid--col-3">
+            <article class="article grid--col-2">
+              <div class="article--main article--main__noHead">
+                <p class="article--timestamp">
+                  <time datetime="PT2M">2 min read</time>
+                  <time datetime="2020-10-12">Nov 12, 2020</time>
+                </p>
+                <h2 class="article--heading">
+                  That which does not kill us makes us stronger
+                </h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quaerat dolore repellendus recusandae nam libero blanditiis
+                  repellat tempora ducimus laborum itaque illum eum sint quasi
+                  exercitationem facilis sit, nulla tempore.
+                </p>
+              </div>
+              <footer class="article--footer">
+                <p class="article--author__img">
+                  <img src="./assets/img/article-author.jpg" />
+                </p>
+                <p class="article--author__name">Robert Willson in</p>
+                <div class="article--tags">
+                  <p class="article--tag">Business</p>
+                  <p class="article--tag">Work</p>
+                </div>
+              </footer>
+            </article>
+
+            <article class="article grid--col-2">
+              <div class="article--main article--main__noHead">
+                <p class="article--timestamp">
+                  <time datetime="PT2M">2 min read</time>
+                  <time datetime="2020-10-12">Nov 12, 2020</time>
+                </p>
+                <h2 class="article--heading">
+                  Do what you can, with what you have, where you are
+                </h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quaerat dolore repellendus recusandae nam libero blanditiis
+                  repellat tempora ducimus laborum itaque illum eum sint quasi
+                  exercitationem facilis sit, nulla tempore.
+                </p>
+              </div>
+              <footer class="article--footer">
+                <p class="article--author__img">
+                  <img src="./assets/img/article-author.jpg" />
+                </p>
+                <p class="article--author__name">Robert Willson in</p>
+                <div class="article--tags">
+                  <p class="article--tag">Nature</p>
+                  <p class="article--tag">Life</p>
+                  <p class="article--tag">Story</p>
+                </div>
+              </footer>
+            </article>
+          </div>
+
+          <article class="article">
+            <div class="article--main article--main__noHead">
+              <p class="article--timestamp">
+                <time datetime="PT2M">2 min read</time>
+                <time datetime="2020-10-12">Nov 12, 2020</time>
+              </p>
+              <h2 class="article--heading">
+                If you cannot do great things, do small things in a great way
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat dolore repellendus recusandae nam libero blanditiis
+                repellat tempora ducimus laborum itaque.
+              </p>
+            </div>
+            <footer class="article--footer">
+              <p class="article--author__img">
+                <img src="./assets/img/article-author.jpg" />
+              </p>
+              <p class="article--author__name">Robert Willson in</p>
+              <div class="article--tags">
+                <p class="article--tag">Notes</p>
+                <p class="article--tag">Life</p>
+                <p class="article--tag">Rest</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="article">
+            <div class="article--main article--main__noHead">
+              <p class="article--timestamp">
+                <time datetime="PT2M">2 min read</time>
+                <time datetime="2020-10-12">Nov 12, 2020</time>
+              </p>
+              <h2 class="article--heading">
+                Remember that happiness is a way of travel, not a destination
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat dolore repellendus recusandae nam libero blanditiis
+                repellat tempora ducimus laborum itaque.
+              </p>
+            </div>
+            <footer class="article--footer">
+              <p class="article--author__img">
+                <img src="./assets/img/article-author.jpg" />
+              </p>
+              <p class="article--author__name">Robert Willson in</p>
+              <div class="article--tags">
+                <p class="article--tag">Life</p>
+                <p class="article--tag">Travel</p>
+                <p class="article--tag">Story</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="article">
+            <div class="article--main article--main__noHead">
+              <p class="article--timestamp">
+                <time datetime="PT2M">2 min read</time>
+                <time datetime="2020-10-12">Nov 12, 2020</time>
+              </p>
+              <h2 class="article--heading">
+                A journey of a thousand leagues begins beneath one's feet
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat dolore repellendus recusandae nam libero blanditiis
+                repellat tempora ducimus laborum itaque.
+              </p>
+            </div>
+            <footer class="article--footer">
+              <p class="article--author__img">
+                <img src="./assets/img/article-author.jpg" />
+              </p>
+              <p class="article--author__name">Robert Willson in</p>
+              <div class="article--tags">
+                <p class="article--tag">Lifestyle</p>
+                <p class="article--tag">Rest</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="article">
+            <div class="article--main article--main__noHead">
+              <p class="article--timestamp">
+                <time datetime="PT2M">2 min read</time>
+                <time datetime="2020-10-12">Nov 12, 2020</time>
+              </p>
+              <h2 class="article--heading">
+                Life shrinks or expands in proportion to one's courage
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat dolore repellendus recusandae nam libero blanditiis
+                repellat tempora ducimus laborum itaque.
+              </p>
+            </div>
+            <footer class="article--footer">
+              <p class="article--author__img">
+                <img src="./assets/img/article-author.jpg" />
+              </p>
+              <p class="article--author__name">Robert Willson in</p>
+              <div class="article--tags">
+                <p class="article--tag">Work</p>
+                <p class="article--tag">Fashion</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="article">
+            <div class="article--main article--main__noHead">
+              <p class="article--timestamp">
+                <time datetime="PT2M">2 min read</time>
+                <time datetime="2020-10-12">Nov 12, 2020</time>
+              </p>
+              <h2 class="article--heading">
+                What you do speaks so loudly that I cannot hear what you say
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat dolore repellendus recusandae nam libero blanditiis
+                repellat tempora ducimus laborum itaque.
+              </p>
+            </div>
+            <footer class="article--footer">
+              <p class="article--author__img">
+                <img src="./assets/img/article-author.jpg" />
+              </p>
+              <p class="article--author__name">Robert Willson in</p>
+              <div class="article--tags">
+                <p class="article--tag">Travel</p>
+                <p class="article--tag">Lifestyle</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="article">
+            <div class="article--main article--main__noHead">
+              <p class="article--timestamp">
+                <time datetime="PT2M">2 min read</time>
+                <time datetime="2020-10-12">Nov 12, 2020</time>
+              </p>
+              <h2 class="article--heading">
+                You must be the change you wish to see in the world
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat dolore repellendus recusandae nam libero blanditiis
+                repellat tempora ducimus laborum itaque.
+              </p>
+            </div>
+            <footer class="article--footer">
+              <p class="article--author__img">
+                <img src="./assets/img/article-author.jpg" />
+              </p>
+              <p class="article--author__name">Robert Willson in</p>
+              <div class="article--tags">
+                <p class="article--tag">Travel</p>
+                <p class="article--tag">Story</p>
+              </div>
+            </footer>
+          </article>
+
+          <div class="grid--col-3 d--none more--articles">
+            <article class="article grid--col-1">
+              <header class="article--header">
+                <p><i class="fa-regular fa-star"></i></p>
+              </header>
+              <div class="article--main">
+                <p class="article--timestamp">
+                  <time datetime="PT2M">2 min read</time>
+                  <time datetime="2020-10-12">Nov 12, 2020</time>
+                </p>
+                <h2 class="article--heading">
+                  Believe and act as if it were impossible to fail
+                </h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quaerat dolore repellendus recusandae nam libero blanditiis
+                  repellat tempora ducimus laborum itaque.
+                </p>
+              </div>
+              <footer class="article--footer">
+                <p class="article--author__img">
+                  <img src="./assets/img/article-author.jpg" />
+                </p>
+                <p class="article--author__name">Robert Willson in</p>
+                <div class="article--tags">
+                  <p class="article--tag">Work</p>
+                  <p class="article--tag">Notes</p>
+                </div>
+              </footer>
+            </article>
+
+            <article class="article">
+              <header class="article--header">
+                <p><i class="fa-regular fa-star"></i></p>
+              </header>
+              <div class="article--main">
+                <p class="article--timestamp">
+                  <time datetime="PT2M">2 min read</time>
+                  <time datetime="2020-10-12">Nov 12, 2020</time>
+                </p>
+                <h2 class="article--heading">
+                  The way I see it, every life is a pile of good things
+                </h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quaerat dolore repellendus recusandae nam libero blanditiis
+                  repellat tempora ducimus laborum itaque.
+                </p>
+              </div>
+              <footer class="article--footer">
+                <p class="article--author__img">
+                  <img src="./assets/img/article-author.jpg" />
+                </p>
+                <p class="article--author__name">Robert Willson in</p>
+                <div class="article--tags">
+                  <p class="article--tag">Life</p>
+                  <p class="article--tag">Rest</p>
+                </div>
+              </footer>
+            </article>
+
+            <article class="article">
+              <header class="article--header">
+                <p><i class="fa-regular fa-star"></i></p>
+              </header>
+              <div class="article--main">
+                <p class="article--timestamp">
+                  <time datetime="PT2M">2 min read</time>
+                  <time datetime="2020-10-12">Nov 12, 2020</time>
+                </p>
+                <h2 class="article--heading">
+                  Everything has beauty, but not everyone can see
+                </h2>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quaerat dolore repellendus recusandae nam libero blanditiis
+                  repellat tempora ducimus laborum itaque.
+                </p>
+              </div>
+              <footer class="article--footer">
+                <p class="article--author__img">
+                  <img src="./assets/img/article-author.jpg" />
+                </p>
+                <p class="article--author__name">Robert Willson in</p>
+                <div class="article--tags">
+                  <p class="article--tag">Fashion</p>
+                  <p class="article--tag">Story</p>
+                </div>
+              </footer>
+            </article>
+
+            <div class="article--group grid--col-3">
+              <article class="article grid--col-2">
+                <div class="article--main article--main__noHead">
+                  <p class="article--timestamp">
+                    <time datetime="PT2M">2 min read</time>
+                    <time datetime="2020-10-12">Nov 12, 2020</time>
+                  </p>
+                  <h2 class="article--heading">
+                    That which does not kill us makes us stronger
+                  </h2>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quaerat dolore repellendus recusandae nam libero blanditiis
+                    repellat tempora ducimus laborum itaque illum eum sint quasi
+                    exercitationem facilis sit, nulla tempore.
+                  </p>
+                </div>
+                <footer class="article--footer">
+                  <p class="article--author__img">
+                    <img src="./assets/img/article-author.jpg" />
+                  </p>
+                  <p class="article--author__name">Robert Willson in</p>
+                  <div class="article--tags">
+                    <p class="article--tag">Business</p>
+                    <p class="article--tag">Work</p>
+                  </div>
+                </footer>
+              </article>
+
+              <article class="article grid--col-2">
+                <div class="article--main article--main__noHead">
+                  <p class="article--timestamp">
+                    <time datetime="PT2M">2 min read</time>
+                    <time datetime="2020-10-12">Nov 12, 2020</time>
+                  </p>
+                  <h2 class="article--heading">
+                    Do what you can, with what you have, where you are
+                  </h2>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quaerat dolore repellendus recusandae nam libero blanditiis
+                    repellat tempora ducimus laborum itaque illum eum sint quasi
+                    exercitationem facilis sit, nulla tempore.
+                  </p>
+                </div>
+                <footer class="article--footer">
+                  <p class="article--author__img">
+                    <img src="./assets/img/article-author.jpg" />
+                  </p>
+                  <p class="article--author__name">Robert Willson in</p>
+                  <div class="article--tags">
+                    <p class="article--tag">Nature</p>
+                    <p class="article--tag">Life</p>
+                    <p class="article--tag">Story</p>
+                  </div>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </div>
+        <button class="article--btn__more">Load More</button>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <section class="footer--top container grid">
+        <section class="latest--post footer--top__item">
+          <h2 class="footer--top__heading">Latest Posts</h2>
+          <div class="latest--post__body">
+            <article class="latest--article">
+              <div class="latest--article__left">
+                <img
+                  src="./assets/img/latest-post-1.jpg"
+                  alt="That which does not kill us makes us stronger"
+                />
+              </div>
+              <div class="latest--article__right">
+                <p class="article--timestamp">
+                  <time datetime="PT2M">2 min read</time>
+                  <time datetime="2020-10-12">Nov 12, 2020</time>
+                </p>
+                <h2 class="latest--article__heading">
+                  That which does not kill us makes us stronger
+                </h2>
+                <footer class="latest--article__footer">
+                  <p class="article--author__img">
+                    <img src="./assets/img/article-author.jpg" />
+                  </p>
+                  <p class="article--author__name">Robert Willson</p>
+                </footer>
+              </div>
+            </article>
+
+            <article class="latest--article footer--top__item">
+              <div class="latest--article__left">
+                <img
+                  src="./assets/img/latest-post-2.jpg"
+                  alt="That which does not kill us makes us stronger"
+                />
+              </div>
+              <div class="latest--article__right">
+                <p class="article--timestamp">
+                  <time datetime="PT2M">2 min read</time>
+                  <time datetime="2020-10-12">Nov 12, 2020</time>
+                </p>
+                <h2 class="latest--article__heading">
+                  That which does not kill us makes us stronger
+                </h2>
+                <footer class="latest--article__footer">
+                  <p class="article--author__img">
+                    <img src="./assets/img/article-author.jpg" />
+                  </p>
+                  <p class="article--author__name">Robert Willson</p>
+                </footer>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="explore--tags footer--top__item">
+          <h2 class="footer--top__heading">Explore Tags</h2>
+          <div class="explore--tag__body">
+            <p class="article--tag explore--tag">Business</p>
+            <p class="article--tag explore--tag">Fashion</p>
+            <p class="article--tag explore--tag">Life</p>
+            <p class="article--tag explore--tag">Lifestyle</p>
+            <p class="article--tag explore--tag">Nature</p>
+            <p class="article--tag explore--tag">Notes</p>
+            <p class="article--tag explore--tag">Rest</p>
+            <p class="article--tag explore--tag">Story</p>
+            <p class="article--tag explore--tag">Technology</p>
+            <p class="article--tag explore--tag">Travel</p>
+            <p class="article--tag explore--tag">Work</p>
+          </div>
+        </section>
+
+        <section class="news">
+          <h2 class="footer--top__heading">Get Interesting News</h2>
+          <div class="news--body">
+            <p>
+              Subscribe to our newsletter and we’ll send you the emails of
+              latest posts.
+            </p>
+            <form>
+              <div class="form--group">
+                <input
+                  type="text"
+                  class="form--control"
+                  placeholder="Email Address"
+                />
+                <button class="footer--btn__join">Join</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </section>
+
+      <hr id="footer--separator" />
+
+      <section class="footer--bottom container">
+        <div class="footer--copyright">
+          <div class="footer--copyright__left">
+            <p>
+              <time datetime="2022">2022</time> &copy; <span>Norlin</span>. All
+              Right Reserved.
+            </p>
+          </div>
+          <div class="footer--copyright__right">
+            <p class="footer--socials" id="twitter">
+              <i class="fa-brands fa-twitter"></i>
+            </p>
+            <p class="footer--socials" id="facebook">
+              <i class="fa-brands fa-facebook-square"></i>
+            </p>
+            <p class="footer--socials" id="instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </p>
+            <p class="footer--socials" id="youtube">
+              <i class="fa-brands fa-youtube"></i>
+            </p>
+            <p class="footer--socials" id="github">
+              <i class="fa-brands fa-github"></i>
+            </p>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
