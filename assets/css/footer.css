@@ -6,6 +6,8 @@
 #footer--separator {
   border-color: var(--tertiary-color);
   border-width: 1px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* Footer Top  Section */
@@ -239,6 +241,8 @@
     flex-basis: 100%;
     justify-content: flex-start;
     order: 3;
+    padding: 0.4rem;
+    padding-bottom: 3rem;
     margin-top: 0.8rem;
   }
 

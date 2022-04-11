@@ -1,0 +1,41 @@
+/* Header Section */
+#main--header {
+  background: var(--primary-color);
+  min-height: 50vh;
+  margin-bottom: 4rem;
+}
+
+/* Hero Section */
+.hero {
+  padding-top: 4rem;
+  min-height: calc(50vh - 110px);
+  color: var(--gray-100);
+}
+
+/* Hero/Tag Section */
+.hero .tag--number {
+  color: var(--gray-200);
+  font-size: 1rem;
+}
+
+.hero .tag--name {
+  font-size: 2.4rem;
+  color: inherit;
+  margin-bottom: 20px;
+}
+
+.hero .tag--description {
+  width: 47%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: inherit;
+}
+
+.article:nth-child(4) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(15, 14, 21, 0.6),
+      rgba(15, 14, 21, 0.6)
+    ),
+    url("../img/article-5.jpg");
+}

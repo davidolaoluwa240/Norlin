@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Norlin</title>
+    <title>Story - Norlin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,10 +25,11 @@
     />
     <link rel="stylesheet" href="./assets/css/shared.css" type="text/css" />
     <link rel="stylesheet" href="./assets/css/grid.css" type="text/css" />
-    <link rel="stylesheet" href="./assets/css/header.css" type="text/css" />
     <link rel="stylesheet" href="./assets/css/navigation.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/header.css" type="text/css" />
     <link rel="stylesheet" href="./assets/css/modal.css" type="text/css" />
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/story.css" type="text/css" />
     <link rel="stylesheet" href="./assets/css/footer.css" type="text/css" />
   </head>
   <body>
@@ -237,8 +238,13 @@
       </nav>
 
       <section class="hero">
-        <h1>Norlin</h1>
-        <p>Thoughts, Stories and ideas.</p>
+        <p class="tag--number">4 posts tagged</p>
+        <h1 class="tag--name">Story</h1>
+        <p class="tag--description">
+          A short story is a piece of prose fiction that typically can be read
+          in one sitting and focuses on a self-contained incident or series of
+          linked incidents, with the intent of evoking a single effect or mood.
+        </p>
       </section>
     </header>
 
@@ -335,73 +341,17 @@
             </footer>
           </article>
 
-          <div class="article--group grid--col-3">
-            <article class="article grid--col-2">
-              <div class="article--main article--main__noHead">
-                <p class="article--timestamp">
-                  <time datetime="PT2M">2 min read</time>
-                  <time datetime="2020-10-12">Nov 12, 2020</time>
-                </p>
-                <h2 class="article--heading">
-                  That which does not kill us makes us stronger
-                </h2>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quaerat dolore repellendus recusandae nam libero blanditiis
-                  repellat tempora ducimus laborum itaque illum eum sint quasi
-                  exercitationem facilis sit, nulla tempore.
-                </p>
-              </div>
-              <footer class="article--footer">
-                <p class="article--author__img">
-                  <img src="./assets/img/article-author.jpg" />
-                </p>
-                <p class="article--author__name">Robert Willson in</p>
-                <div class="article--tags">
-                  <p class="article--tag">Business</p>
-                  <p class="article--tag">Work</p>
-                </div>
-              </footer>
-            </article>
-
-            <article class="article grid--col-2">
-              <div class="article--main article--main__noHead">
-                <p class="article--timestamp">
-                  <time datetime="PT2M">2 min read</time>
-                  <time datetime="2020-10-12">Nov 12, 2020</time>
-                </p>
-                <h2 class="article--heading">
-                  Do what you can, with what you have, where you are
-                </h2>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quaerat dolore repellendus recusandae nam libero blanditiis
-                  repellat tempora ducimus laborum itaque illum eum sint quasi
-                  exercitationem facilis sit, nulla tempore.
-                </p>
-              </div>
-              <footer class="article--footer">
-                <p class="article--author__img">
-                  <img src="./assets/img/article-author.jpg" />
-                </p>
-                <p class="article--author__name">Robert Willson in</p>
-                <div class="article--tags">
-                  <p class="article--tag">Nature</p>
-                  <p class="article--tag">Life</p>
-                  <p class="article--tag">Story</p>
-                </div>
-              </footer>
-            </article>
-          </div>
-
-          <article class="article">
-            <div class="article--main article--main__noHead">
+          <article class="article grid--col-3">
+            <header class="article--header">
+              <p><i class="fa-regular fa-star"></i></p>
+            </header>
+            <div class="article--main">
               <p class="article--timestamp">
                 <time datetime="PT2M">2 min read</time>
                 <time datetime="2020-10-12">Nov 12, 2020</time>
               </p>
               <h2 class="article--heading">
-                If you cannot do great things, do small things in a great way
+                Everything has beauty, but not everyone can see
               </h2>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -415,299 +365,11 @@
               </p>
               <p class="article--author__name">Robert Willson in</p>
               <div class="article--tags">
-                <p class="article--tag">Notes</p>
-                <p class="article--tag">Life</p>
-                <p class="article--tag">Rest</p>
-              </div>
-            </footer>
-          </article>
-
-          <article class="article">
-            <div class="article--main article--main__noHead">
-              <p class="article--timestamp">
-                <time datetime="PT2M">2 min read</time>
-                <time datetime="2020-10-12">Nov 12, 2020</time>
-              </p>
-              <h2 class="article--heading">
-                Remember that happiness is a way of travel, not a destination
-              </h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat dolore repellendus recusandae nam libero blanditiis
-                repellat tempora ducimus laborum itaque.
-              </p>
-            </div>
-            <footer class="article--footer">
-              <p class="article--author__img">
-                <img src="./assets/img/article-author.jpg" />
-              </p>
-              <p class="article--author__name">Robert Willson in</p>
-              <div class="article--tags">
-                <p class="article--tag">Life</p>
-                <p class="article--tag">Travel</p>
-                <p class="article--tag">Story</p>
-              </div>
-            </footer>
-          </article>
-
-          <article class="article">
-            <div class="article--main article--main__noHead">
-              <p class="article--timestamp">
-                <time datetime="PT2M">2 min read</time>
-                <time datetime="2020-10-12">Nov 12, 2020</time>
-              </p>
-              <h2 class="article--heading">
-                A journey of a thousand leagues begins beneath one's feet
-              </h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat dolore repellendus recusandae nam libero blanditiis
-                repellat tempora ducimus laborum itaque.
-              </p>
-            </div>
-            <footer class="article--footer">
-              <p class="article--author__img">
-                <img src="./assets/img/article-author.jpg" />
-              </p>
-              <p class="article--author__name">Robert Willson in</p>
-              <div class="article--tags">
-                <p class="article--tag">Lifestyle</p>
-                <p class="article--tag">Rest</p>
-              </div>
-            </footer>
-          </article>
-
-          <article class="article">
-            <div class="article--main article--main__noHead">
-              <p class="article--timestamp">
-                <time datetime="PT2M">2 min read</time>
-                <time datetime="2020-10-12">Nov 12, 2020</time>
-              </p>
-              <h2 class="article--heading">
-                Life shrinks or expands in proportion to one's courage
-              </h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat dolore repellendus recusandae nam libero blanditiis
-                repellat tempora ducimus laborum itaque.
-              </p>
-            </div>
-            <footer class="article--footer">
-              <p class="article--author__img">
-                <img src="./assets/img/article-author.jpg" />
-              </p>
-              <p class="article--author__name">Robert Willson in</p>
-              <div class="article--tags">
-                <p class="article--tag">Work</p>
                 <p class="article--tag">Fashion</p>
-              </div>
-            </footer>
-          </article>
-
-          <article class="article">
-            <div class="article--main article--main__noHead">
-              <p class="article--timestamp">
-                <time datetime="PT2M">2 min read</time>
-                <time datetime="2020-10-12">Nov 12, 2020</time>
-              </p>
-              <h2 class="article--heading">
-                What you do speaks so loudly that I cannot hear what you say
-              </h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat dolore repellendus recusandae nam libero blanditiis
-                repellat tempora ducimus laborum itaque.
-              </p>
-            </div>
-            <footer class="article--footer">
-              <p class="article--author__img">
-                <img src="./assets/img/article-author.jpg" />
-              </p>
-              <p class="article--author__name">Robert Willson in</p>
-              <div class="article--tags">
-                <p class="article--tag">Travel</p>
-                <p class="article--tag">Lifestyle</p>
-              </div>
-            </footer>
-          </article>
-
-          <article class="article">
-            <div class="article--main article--main__noHead">
-              <p class="article--timestamp">
-                <time datetime="PT2M">2 min read</time>
-                <time datetime="2020-10-12">Nov 12, 2020</time>
-              </p>
-              <h2 class="article--heading">
-                You must be the change you wish to see in the world
-              </h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Quaerat dolore repellendus recusandae nam libero blanditiis
-                repellat tempora ducimus laborum itaque.
-              </p>
-            </div>
-            <footer class="article--footer">
-              <p class="article--author__img">
-                <img src="./assets/img/article-author.jpg" />
-              </p>
-              <p class="article--author__name">Robert Willson in</p>
-              <div class="article--tags">
-                <p class="article--tag">Travel</p>
                 <p class="article--tag">Story</p>
               </div>
             </footer>
           </article>
-
-          <div class="grid--col-3 d--none more--articles">
-            <article class="article grid--col-1">
-              <header class="article--header">
-                <p><i class="fa-regular fa-star"></i></p>
-              </header>
-              <div class="article--main">
-                <p class="article--timestamp">
-                  <time datetime="PT2M">2 min read</time>
-                  <time datetime="2020-10-12">Nov 12, 2020</time>
-                </p>
-                <h2 class="article--heading">
-                  Believe and act as if it were impossible to fail
-                </h2>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quaerat dolore repellendus recusandae nam libero blanditiis
-                  repellat tempora ducimus laborum itaque.
-                </p>
-              </div>
-              <footer class="article--footer">
-                <p class="article--author__img">
-                  <img src="./assets/img/article-author.jpg" />
-                </p>
-                <p class="article--author__name">Robert Willson in</p>
-                <div class="article--tags">
-                  <p class="article--tag">Work</p>
-                  <p class="article--tag">Notes</p>
-                </div>
-              </footer>
-            </article>
-
-            <article class="article">
-              <header class="article--header">
-                <p><i class="fa-regular fa-star"></i></p>
-              </header>
-              <div class="article--main">
-                <p class="article--timestamp">
-                  <time datetime="PT2M">2 min read</time>
-                  <time datetime="2020-10-12">Nov 12, 2020</time>
-                </p>
-                <h2 class="article--heading">
-                  The way I see it, every life is a pile of good things
-                </h2>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quaerat dolore repellendus recusandae nam libero blanditiis
-                  repellat tempora ducimus laborum itaque.
-                </p>
-              </div>
-              <footer class="article--footer">
-                <p class="article--author__img">
-                  <img src="./assets/img/article-author.jpg" />
-                </p>
-                <p class="article--author__name">Robert Willson in</p>
-                <div class="article--tags">
-                  <p class="article--tag">Life</p>
-                  <p class="article--tag">Rest</p>
-                </div>
-              </footer>
-            </article>
-
-            <article class="article">
-              <header class="article--header">
-                <p><i class="fa-regular fa-star"></i></p>
-              </header>
-              <div class="article--main">
-                <p class="article--timestamp">
-                  <time datetime="PT2M">2 min read</time>
-                  <time datetime="2020-10-12">Nov 12, 2020</time>
-                </p>
-                <h2 class="article--heading">
-                  Everything has beauty, but not everyone can see
-                </h2>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quaerat dolore repellendus recusandae nam libero blanditiis
-                  repellat tempora ducimus laborum itaque.
-                </p>
-              </div>
-              <footer class="article--footer">
-                <p class="article--author__img">
-                  <img src="./assets/img/article-author.jpg" />
-                </p>
-                <p class="article--author__name">Robert Willson in</p>
-                <div class="article--tags">
-                  <p class="article--tag">Fashion</p>
-                  <p class="article--tag">Story</p>
-                </div>
-              </footer>
-            </article>
-
-            <div class="article--group grid--col-3">
-              <article class="article grid--col-2">
-                <div class="article--main article--main__noHead">
-                  <p class="article--timestamp">
-                    <time datetime="PT2M">2 min read</time>
-                    <time datetime="2020-10-12">Nov 12, 2020</time>
-                  </p>
-                  <h2 class="article--heading">
-                    That which does not kill us makes us stronger
-                  </h2>
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Quaerat dolore repellendus recusandae nam libero blanditiis
-                    repellat tempora ducimus laborum itaque illum eum sint quasi
-                    exercitationem facilis sit, nulla tempore.
-                  </p>
-                </div>
-                <footer class="article--footer">
-                  <p class="article--author__img">
-                    <img src="./assets/img/article-author.jpg" />
-                  </p>
-                  <p class="article--author__name">Robert Willson in</p>
-                  <div class="article--tags">
-                    <p class="article--tag">Business</p>
-                    <p class="article--tag">Work</p>
-                  </div>
-                </footer>
-              </article>
-
-              <article class="article grid--col-2">
-                <div class="article--main article--main__noHead">
-                  <p class="article--timestamp">
-                    <time datetime="PT2M">2 min read</time>
-                    <time datetime="2020-10-12">Nov 12, 2020</time>
-                  </p>
-                  <h2 class="article--heading">
-                    Do what you can, with what you have, where you are
-                  </h2>
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Quaerat dolore repellendus recusandae nam libero blanditiis
-                    repellat tempora ducimus laborum itaque illum eum sint quasi
-                    exercitationem facilis sit, nulla tempore.
-                  </p>
-                </div>
-                <footer class="article--footer">
-                  <p class="article--author__img">
-                    <img src="./assets/img/article-author.jpg" />
-                  </p>
-                  <p class="article--author__name">Robert Willson in</p>
-                  <div class="article--tags">
-                    <p class="article--tag">Nature</p>
-                    <p class="article--tag">Life</p>
-                    <p class="article--tag">Story</p>
-                  </div>
-                </footer>
-              </article>
-            </div>
-          </div>
         </div>
         <button class="article--btn__more">Load More</button>
       </section>
