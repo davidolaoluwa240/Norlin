@@ -7,7 +7,7 @@
 
 /* Hero Section */
 .hero {
-  padding-top: 4rem;
+  /* padding-top: 4rem; */
   min-height: calc(50vh - 110px);
   color: var(--gray-100);
 }
@@ -25,7 +25,6 @@
 }
 
 .hero .tag--description {
-  width: 47%;
   text-align: center;
   font-size: 1.2rem;
   color: inherit;

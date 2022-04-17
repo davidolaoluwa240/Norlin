@@ -6,6 +6,7 @@
   background-color: rgba(9, 8, 15, 0.9);
 
   position: fixed;
+  z-index: 2;
 }
 
 .modal--overlay__alt {
@@ -19,6 +20,7 @@
 
 .modal {
   position: fixed;
+  z-index: 3;
   left: 50%;
   transform: translateX(-50%);
   top: 0;

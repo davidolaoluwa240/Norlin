@@ -6,7 +6,7 @@
 
 :root {
   --primary-color: #0f0e15;
-  --secondary-color: #ff7b7bb3;
+  --secondary-color: #ff7b7b;
   --tertiary-color: #09080f;
   --gray-100: #eee;
   --gray-200: #aaa;
@@ -30,8 +30,4 @@ img {
 
 .d--none {
   display: none;
-}
-
-body::-webkit-scrollbar {
-  width: 0px;
 }

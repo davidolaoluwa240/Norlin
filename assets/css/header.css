@@ -15,19 +15,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 7rem;
+  padding-top: 10%;
+}
+
+.hero--container {
+  text-align: center;
+  width: 95%;
+  max-width: 700px;
 }
 
 .hero h1 {
   font-size: 60px;
   color: var(--light-color);
   font-weight: 900;
+  text-align: center;
 }
 
 .hero p {
   color: var(--gray-200);
   margin-top: -12px;
   font-size: 20px;
+  text-align: center;
 }
 
 @media screen and (max-width: 765px) {

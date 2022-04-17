@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
+    <title>Story - Norlin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,7 +29,11 @@
     <link rel="stylesheet" href="./assets/css/header.css" type="text/css" />
     <link rel="stylesheet" href="./assets/css/modal.css" type="text/css" />
     <link rel="stylesheet" href="./assets/css/main.css" type="text/css" />
-    <link rel="stylesheet" href="./assets/css/about.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="./assets/css/article-details.css"
+      type="text/css"
+    />
     <link rel="stylesheet" href="./assets/css/footer.css" type="text/css" />
   </head>
   <body>
@@ -163,7 +167,7 @@
       </footer>
     </section>
 
-    <header id="main--header">
+    <header id="secondary--header">
       <nav class="navbar--nav">
         <div class="navbar--brand">
           <a href="./index.html">Norlin</a>
@@ -236,103 +240,298 @@
           </ul>
         </div>
       </nav>
-
-      <section class="hero">
-        <div class="hero--container">
-          <h1>About</h1>
-        </div>
-      </section>
     </header>
 
-    <main>
-      <section class="about container">
-        <p class="about--text">
-          Hi, my name is Robert Wilson. Sin tantum modo ad indicia veteris
-          memoriae virtute cognoscenda, curiosorum. Haec et tu ita posuisti, et
-          verba vestra sunt. Idemne potest esse dies saepius, qui semel fuit?
-          Ampulla enim sit necne sit, quis non iure optimo irrideatur, si
-          laboret? Ego vero volo in virtute vim esse quam maximam. Serpere
-          genere anguiculos, nare anaticulas, evolare merulas, cornibus uti
-          videmus boves, nepas aculeis. Conferam tecum, quam cuique verso rem
-          subicias; Si longus, levis. Neque enim disputari sine reprehensione
-          nec cum iracundia aut pertinacia recte disputari disseretur inter.
-        </p>
-        <figure>
-          <img src="./assets/img/about-1.jpg" alt="About image" />
-          <figcaption class="about--img__caption">
-            <p>Minimalism / <a href="https://www.unsplash.com">Unsplash</a></p>
-          </figcaption>
-        </figure>
-        <p class="about--text">
-          In qua quid est boni praeter summam voluptatem, et eam sempiternam?
-          Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est
-          investigatio rerum occultissimarum. Negat enim tenuissimo victu, id
-          est contemptissimis escis et potionibus, minorem voluptatem percipi
-          quam rebus exquisitissimis ad epulandum. Non enim iam stirpis bonum
-          quaeret, sed animalis. Qui autem esse poteris, nisi te amor ipse
-          ceperit? Sic igitur in homine perfectio ista in eo potissimum, quod
-          est optimum, id est in virtute, laudatur. An, partus ancillae sitne in
-          fructu disseretur sine reprehensione iracundia.
-        </p>
-        <div class="about--img__list">
-          <figure class="grid">
-            <div class="about--img__item">
-              <img src="./assets/img/about-2.jpg" alt="About Image List" />
-            </div>
-            <div class="about--img__item">
-              <img src="./assets/img/about-3.jpg" alt="About Image List" />
-            </div>
-            <div class="about--img__item">
-              <img src="./assets/img/about-4.jpg" alt="About Image List" />
-            </div>
-            <figcaption class="about--img__caption grid--col-3">
-              <p>
-                Minimalism / <a href="https://www.unsplash.com">Unsplash</a>
+    <main id="main">
+      <article class="article--details">
+        <header class="article--details__header">
+          <div class="article--details__header--left">
+            <img
+              class="article--details__header--img"
+              src="./assets/img/article-2.jpg"
+              alt="The way I see it, every life is a pile of good things"
+            />
+          </div>
+          <div class="article--details__header--right">
+            <div class="article--details__header--right__main">
+              <p
+                class="article--details__header--right__timestamp article--timestamp"
+              >
+                <time datetime="PT2M">2 min read</time>
+                <time datetime="2020-11-11">Nov 11, 2020</time>
               </p>
-            </figcaption>
-          </figure>
+              <h1
+                class="article--details__header--right__title article--heading"
+              >
+                The way I see it, every life is a pile of good things
+              </h1>
+            </div>
+            <footer
+              class="article--details__header--right__footer article--footer"
+            >
+              <p
+                class="article--details__header--right__footer--author__img article--author__img"
+              >
+                <img src="./assets/img/article-author.jpg" />
+              </p>
+              <p
+                class="article--details__header--right__footer--author__name article--author__name"
+              >
+                Robert Willson in
+              </p>
+              <div
+                class="article--details__header--right__footer--article--tags article--tags"
+              >
+                <a href="./story.html" class="article--tag">Life</a>
+                <a href="./story.html" class="article--tag">Rest</a>
+              </div>
+            </footer>
+          </div>
+        </header>
+
+        <section class="article--details__main">
+          <div class="article--details__main--wrapper-1">
+            <p>
+              Sin tantum modo ad indicia veteris memoriae cognoscenda,
+              curiosorum. Haec et tu ita posuisti, et verba vestra sunt. Idemne
+              potest esse dies saepius, qui semel fuit? Ampulla enim sit necne
+              sit, quis non iure optimo irrideatur, si laboret? Ego vero volo in
+              virtute vim esse quam maximam; Serpere anguiculos, nare
+              anaticulas, evolare merulas, cornibus uti videmus boves, nepas
+              aculeis. Conferam tecum, quam cuique verso rem subicias. Si
+              longus, levis ampulla enim sit necne vel omnia vel partes genere
+              plurima et maxima.
+            </p>
+
+            <blockquote>
+              The longer I live, the more I realize that I am never wrong about
+              anything, and that all the pains I have so humbly taken to verify
+              my notions have only wasted my time!
+            </blockquote>
+
+            <p class="mb">
+              In qua quid est boni praeter summam voluptatem, et eam
+              sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione
+              facilior facta est investigatio rerum occultissimarum. Negat enim
+              tenuissimo victu, id est contemptissimis escis et potionibus,
+              minorem voluptatem percipi quam rebus exquisitissimis ad
+              epulandum. Non enim iam stirpis bonum quaeret, sed animalis. Qui
+              autem esse poteris, nisi te amor ipse ceperit? Sic igitur in
+              homine perfectio ista in eo potissimum, quod est optimum, id est
+              in virtute, laudatur. Natura sic ab iis investigata est, ut nulla
+              pars caelo, mari, terra, ut poëtice loquar, praetermissa sit;
+              Eadem nunc mea adversum te oratio est. Mihi quidem Homerus huius
+              modi quiddam vidisse videatur in iis, quae de Sirenum cantibus
+              finxerit potionibus.
+            </p>
+          </div>
+
+          <div class="article--details__main--wrapper-2 mb">
+            <figure>
+              <img
+                src="./assets/img/article-details-1.jpg"
+                alt="Alone with myself"
+              />
+              <figcaption>
+                <p>
+                  Alone with myself /
+                  <cite
+                    ><a href="https://unsplash.com/" target="_blank"
+                      >Unsplash</a
+                    ></cite
+                  >
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="article--details__main--wrapper-1">
+            <p class="mb">
+              Sic igitur in homine perfectio ista in eo potissimum, quod est
+              optimum, id est in virtute, laudatur. Natura sic ab iis
+              investigata est, ut nulla pars caelo, mari, terra, ut poëtice
+              loquar, praetermissa sit. Eadem nunc mea adversum te oratio est.
+              Mihi quidem Homerus huius modi quiddam vidisse videatur in iis,
+              quae de Sirenum cantibus finxerit. Neque enim disputari sine
+              reprehensione nec cum iracundia aut pertinacia recte disputari
+              potest. An, partus ancillae sitne in fructu habendus, disseretur
+              inter principes civitatis. Put in geometria, prima si dederis,
+              danda sunt omnia. Longum est enim ad omnia respondere.
+            </p>
+
+            <iframe
+              width="100%"
+              height="427"
+              class="mb-alt"
+              src="https://www.youtube.com/embed/Z9CsuNMdvLg"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+            <p class="mb-alt">
+              Qua ex cognitione facilior facta est investigatio rerum
+              occultissimarum. Negat enim tenuissimo victu, id est
+              contemptissimis escis et potionibus, minorem voluptatem percipi
+              quam rebus exquisitissimis ad epulandum. Non enim iam stirpis
+              bonum quaeret, sed animalis. Qui autem esse poteris, nisi te amor
+              ipse ceperit? Sic igitur in homine perfectio ista in eo
+              potissimum, quod est optimum, id est in virtute, laudatur
+              disputari sine.
+            </p>
+
+            <p>
+              Sin tantum modo ad indicia veteris memoriae cognoscenda,
+              curiosorum. Haec et tu ita posuisti, et verba vestra sunt. Idemne
+              potest esse dies saepius, qui semel fuit? Ampulla enim sit necne
+              sit, quis non iure optimo irrideatur, si laboret? Ego vero volo in
+              virtute vim esse quam maximam; Serpere anguiculos, nare
+              anaticulas, evolare merulas, cornibus uti videmus boves, nepas
+              aculeis. Archytam? Qua ex cognitione facilior facta est investiga.
+            </p>
+          </div>
+        </section>
+
+        <footer class="article--details__footer">
+          <div class="article--details__footer--share">
+            <ul class="article--details__footer--share__list">
+              <li>
+                <a
+                  class="article--details__footer--share__link"
+                  href=""
+                  target="_blank"
+                  ><i class="fa-brands fa-facebook-square"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="article--details__footer--share__link"
+                  href=""
+                  target="_blank"
+                  ><i class="fa-brands fa-twitter-square"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="article--details__footer--share__link"
+                  href=""
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="article--details__footer--pagination">
+            <div class="article--details__footer--pagination__list">
+              <a href="./article-details.html">
+                <article class="article--details__footer--pagination__prev">
+                  <p><i class="fa-solid fa-angle-left"></i> Previous Post</p>
+                  <h2>Everything has beauty, but not everyone can see</h2>
+                </article>
+              </a>
+              <a href="./article-details.html">
+                <article class="article--details__footer--pagination__next">
+                  <p>Next Post <i class="fa-solid fa-angle-right"></i></p>
+                  <h2>Believe and act as if it were impossible to fail</h2>
+                </article>
+              </a>
+            </div>
+          </div>
+        </footer>
+      </article>
+
+      <section class="related--article">
+        <h2 class="footer--top__heading related--article__heading">
+          You may also like
+        </h2>
+
+        <div class="related--article__container grid">
+          <article class="article">
+            <a href="./article-details.html"></a>
+            <div class="article--main article--main__noHead">
+              <p class="article--timestamp">
+                <time datetime="PT2M">2 min read</time>
+                <time datetime="2020-10-12">Nov 12, 2020</time>
+              </p>
+              <h2 class="article--heading">
+                Believe and act as if it were impossible to fail
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat dolore repellendus recusandae nam libero blanditiis
+                repellat tempora ducimus laborum itaque.
+              </p>
+            </div>
+            <footer class="article--footer">
+              <p class="article--author__img">
+                <img src="./assets/img/article-author.jpg" />
+              </p>
+              <p class="article--author__name">Robert Willson in</p>
+              <div class="article--tags">
+                <a href="./story.html" class="article--tag">Work</a>
+                <a href="./story.html" class="article--tag">Notes</a>
+              </div>
+            </footer>
+          </article>
+
+          <article class="article">
+            <a href="./article-details.html"></a>
+            <div class="article--main article--main__noHead">
+              <p class="article--timestamp">
+                <time datetime="PT2M">2 min read</time>
+                <time datetime="2020-10-12">Nov 12, 2020</time>
+              </p>
+              <h2 class="article--heading">
+                The way I see it, every life is a pile of good things
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat dolore repellendus recusandae nam libero blanditiis
+                repellat tempora ducimus laborum itaque.
+              </p>
+            </div>
+            <footer class="article--footer">
+              <p class="article--author__img">
+                <img src="./assets/img/article-author.jpg" />
+              </p>
+              <p class="article--author__name">Robert Willson in</p>
+              <div class="article--tags">
+                <a href="./story.html" class="article--tag">Life</a>
+                <a href="./story.html" class="article--tag">Rest</a>
+              </div>
+            </footer>
+          </article>
+
+          <article class="article">
+            <a href="./article-details.html"></a>
+            <div class="article--main article--main__noHead">
+              <p class="article--timestamp">
+                <time datetime="PT2M">2 min read</time>
+                <time datetime="2020-10-12">Nov 12, 2020</time>
+              </p>
+              <h2 class="article--heading">
+                Everything has beauty, but not everyone can see
+              </h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat dolore repellendus recusandae nam libero blanditiis
+                repellat tempora ducimus laborum itaque.
+              </p>
+            </div>
+            <footer class="article--footer">
+              <p class="article--author__img">
+                <img src="./assets/img/article-author.jpg" />
+              </p>
+              <p class="article--author__name">Robert Willson in</p>
+              <div class="article--tags">
+                <a href="./story.html" class="article--tag">Fashion</a>
+                <a href="./story.html" class="article--tag">Story</a>
+              </div>
+            </footer>
+          </article>
         </div>
-        <p class="about--text">
-          In omni enim arte vel studio vel quavis scientia vel in ipsa virtute
-          optimum quidque rarissimum est. Quod est, ut dixi, habere ea, quae
-          secundum naturam sint, vel omnia vel plurima et maxima. Quodsi ipsam
-          honestatem undique pertectam atque absolutam. Tecum optime, deinde
-          etiam cum mediocri amico. Neque enim disputari sine pertectam
-          reprehensione nec cum iracundia aut pertinacia recte disputari potest.
-          An, partus ancillae sitne in fructu habendus, disseretur inter
-          principes civitatis, P. Ut in geometria, prima si dederis, danda sunt
-          omnia. Longum est enim ad omnia respondere, quae a te dicta sunt. Nam
-          cui proposito sit conservatio sui, necesse est huic partes quoque sui
-          caras suo genere laudabiles. Servari enim iustitia nisi a forti viro,
-          nisi a sapiente nona civitatis.
-        </p>
-        <div class="about--video">
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/QyQ85DEVpbc"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <p class="about--text">
-          Ego quoque, inquit, didicerim libentius si quid attuleris, quam te
-          reprehenderim. Iam insipientes alios ita esse, ut nullo modo ad
-          sapientiam possent pervenire, alios, qui possent, si id egissent,
-          sapientiam consequi. Id quaeris, inquam, in quo, utrum respondero,
-          verses te huc atque illuc necesse est. Sed quid ages tandem, si
-          utilitas ab amicitia, ut fit saepe, defecerit? Sed isti ipsi, qui
-          voluptate et dolore omnia metiuntur, nonne clamant sapienti plus
-          semper adesse quod velit quam quod nolit? Quae quidem sapientes
-          sequuntur duce natura tamquam videntes. Quod enim fitus dissolutum
-          sit, id esse sine sensu, utilitas quod autem sine sensu sit, id nihil
-          ad nos pertinere omnino. Idne consensisse de Calatino plurimas gentis
-          arbitramur, primarium populi fuisse, quod praestantissimus fuisset in
-          conficiendis voluptatibus? Utram tandem linguam nescio.
-        </p>
-        <hr />
       </section>
     </main>
 
@@ -354,8 +553,8 @@
                   <time datetime="2020-10-12">Nov 12, 2020</time>
                 </p>
                 <a
-                  class="latest--article__heading"
                   href="./article-details.html"
+                  class="latest--article__heading"
                 >
                   That which does not kill us makes us stronger
                 </a>
@@ -381,8 +580,8 @@
                   <time datetime="2020-10-12">Nov 12, 2020</time>
                 </p>
                 <a
-                  class="latest--article__heading"
                   href="./article-details.html"
+                  class="latest--article__heading"
                 >
                   That which does not kill us makes us stronger
                 </a>

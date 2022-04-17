@@ -1,6 +1,6 @@
 /* Footer Section */
 #footer {
-  margin-top: 80px;
+  margin-top: 10rem;
 }
 
 #footer--separator {
@@ -69,15 +69,18 @@
   flex-basis: 60%;
 }
 
-.latest--article__right h2 {
+.latest--article__right > a {
   line-height: 1;
   margin: 10px 0;
   font-size: 18px;
+  display: block;
+  text-decoration: none;
   font-weight: 900;
   cursor: pointer;
+  color: var(--light-color);
 }
 
-.latest--article__right h2:hover {
+.latest--article__right > a:hover {
   color: rgba(255, 123, 123, 0.9);
 }
 
@@ -193,6 +196,8 @@
   background-color: #17151e;
   border-radius: 6px;
   cursor: pointer;
+  display: block;
+  text-decoration: none;
   transition: all 0.3s linear;
 
   display: flex;
@@ -202,6 +207,7 @@
 
 .footer--socials i {
   color: var(--light-color);
+  vertical-align: middle;
 }
 
 .footer--socials:hover {
